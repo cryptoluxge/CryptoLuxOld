@@ -1,0 +1,5 @@
+export const MILKOMEDA_BLOCK_TIME = 4;
+
+export const BLOCKS_PER_YEAR = (60 / MILKOMEDA_BLOCK_TIME) * 60 * 24 * 365; // 10512000
+export const MILKY_PER_BLOCK = 6;
+export const MILKY_PER_YEAR = MILKY_PER_BLOCK * BLOCKS_PER_YEAR;
