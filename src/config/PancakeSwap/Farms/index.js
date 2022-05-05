@@ -1071,6 +1071,16 @@ const farms = [
     token: mainnetTokens.rpg.contractAddress,
     quoteToken: mainnetTokens.busd.contractAddress,
   },
+  {
+    pid: 98,
+    lpSymbol: "GAL-BNB LP",
+    lpAddresses: {
+      97: "",
+      56: "0xbe6A4f74fdDc88853612C50D7404E059b37692D8",
+    },
+    token: mainnetTokens.gal.contractAddress,
+    quoteToken: mainnetTokens.wbnb.contractAddress,
+  },
 ];
 
 export default farms;

@@ -1959,4 +1959,11 @@ export const mainnetTokens = {
     name: "ANKR",
     website: "https://www.ankr.com/",
   },
+  gal: {
+    contractAddress: "0xe4Cc45Bb5DBDA06dB6183E8bf016569f40497Aa5",
+    decimals: 18,
+    symbol: "GAL",
+    name: "Project Galaxy",
+    website: "https://galaxy.eco/",
+  },
 };

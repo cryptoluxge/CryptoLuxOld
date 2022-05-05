@@ -1,5 +1,19 @@
 const pools = [
   {
+    id: "gal_pool",
+    symbol: "GAL",
+    name: "Galaxy ECO",
+    tokenContractAddress: "0xe4Cc45Bb5DBDA06dB6183E8bf016569f40497Aa5",
+    poolContractAddress: "0xa5D57C5dca083a7051797920c78fb2b19564176B",
+    website: "https://galaxy.eco/",
+    twitter: "https://twitter.com/ProjectGalaxyHQ",
+    telegram: "https://t.me/ProjectGalaxyHQ",
+    startBlock: 17538945,
+    endBlock: 19266945,
+    rewardPerBlock: 0.09645,
+    decimals: 18,
+  },
+  {
     id: "rpg_pool",
     symbol: "RPG",
     name: "Rangers Protocol",
