@@ -1,15 +1,9 @@
 import { useEffect, useState, useRef } from "react";
-
-// @mui material components
 import Card from "@mui/material/Card";
 import Icon from "@mui/material/Icon";
 import axios from "axios";
-
-// Soft UI Dashboard React components
 import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
-
-// Soft UI Dashboard React example components
 import TimelineItem from "examples/Timeline/TimelineItem";
 
 function OrdersOverview() {
@@ -17,11 +11,7 @@ function OrdersOverview() {
   const [coinMarketCapTreding, setCoinMarketCapTreding] = useState([]);
   function tredingCoinsCMC() {
     axios.get("https://api.coinmarketcap.com/data-api/v3/topsearch/rank").then((response) => {
-      const coinsArray = [];
-      for (let i = 0; i < 7; i += 1) {
-        coinsArray.push(response.data.data.cryptoTopSearchRanks[i]);
-        setCoinMarketCapTreding(coinsArray);
-      }
+      setCoinMarketCapTreding(response.data.data.cryptoTopSearchRanks);
     });
   }
 
