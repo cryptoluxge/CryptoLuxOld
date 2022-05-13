@@ -308,8 +308,8 @@ export const MilkomedaChain = async () => {
           chainId: "0x7d1",
           chainName: "Milkomeda C1",
           nativeCurrency: {
-            name: "MilkADA",
-            symbol: "MilkADA",
+            name: "wADA",
+            symbol: "wADA",
             decimals: 18,
           },
           rpcUrls: ["https://rpc-mainnet-cardano-evm.c1.milkomeda.com"],
