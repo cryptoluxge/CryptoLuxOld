@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Card from "@mui/material/Card";
 import SuiBox from "components/SuiBox";
 import Table from "@mui/material/Table";
@@ -11,6 +11,7 @@ import { useWeb3React } from "@web3-react/core";
 import TokenTable from "./components/TxTable";
 
 function tokenBalances() {
+  const mountedRef = useRef(true);
   const { account, chainId } = useWeb3React();
   const [nativeTxs, setNativeTxs] = useState([]);
 
@@ -21,6 +22,10 @@ function tokenBalances() {
 
   useEffect(() => {
     getTxs();
+
+    return () => {
+      mountedRef.current = false;
+    };
   }, []);
 
   return (

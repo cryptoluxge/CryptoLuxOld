@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import SuiBox from "components/SuiBox";
 import { Card, Stack } from "@mui/material";
 import axios from "axios";
@@ -6,6 +6,7 @@ import Avatar from "@mui/material/Avatar";
 import ListItem from "./components/ListItem";
 
 function Tables() {
+  const mountedRef = useRef(true);
   const [data, setData] = useState([]);
 
   const emotions = { Fear: "შიში", Greed: "სიხარბე", "Extreme Fear": "ექსტრემალური შიში", "Extreme Greed": "ექსტრემალური სიხარბე" };
@@ -22,6 +23,9 @@ function Tables() {
   }
   useEffect(() => {
     getData();
+    return () => {
+      mountedRef.current = false;
+    };
   }, []);
 
   return (

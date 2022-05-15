@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { getTopCoins } from "utils/CoinGeckoAPI";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
@@ -8,6 +8,7 @@ import Paper from "@mui/material/Paper";
 import TableView from "./TableView";
 
 function MarketData() {
+  const mountedRef = useRef(true);
   const [data, setData] = useState([]);
 
   async function getMarketData() {
@@ -17,6 +18,9 @@ function MarketData() {
 
   useEffect(() => {
     getMarketData();
+    return () => {
+      mountedRef.current = false;
+    };
   }, []);
 
   return (

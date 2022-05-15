@@ -41,7 +41,7 @@ const pools = [
     rewardPerBlock: 4.6296,
     decimals: 18,
   },
-  {
+  /* {
     id: "ceek_pool",
     symbol: "CEEK",
     name: "CEEK",
@@ -54,8 +54,8 @@ const pools = [
     endBlock: 17800989,
     rewardPerBlock: 0.8078,
     decimals: 18,
-  },
-  {
+  }, */
+  /* {
     id: "tiny_pool",
     symbol: "TINC",
     name: "Tiny World",
@@ -68,8 +68,8 @@ const pools = [
     endBlock: 17599880,
     rewardPerBlock: 0.4677,
     decimals: 18,
-  },
-  {
+  }, */
+  /* {
     id: "pear_pool",
     symbol: "PEX",
     name: "PearDAO",
@@ -82,8 +82,8 @@ const pools = [
     endBlock: 17399470,
     rewardPerBlock: 0.3865,
     decimals: 18,
-  },
-  {
+  }, */
+  /* {
     id: "gmi_pool",
     symbol: "GMI",
     name: "GAMIFI",
@@ -96,7 +96,7 @@ const pools = [
     endBlock: 17372095,
     rewardPerBlock: 17.939,
     decimals: 18,
-  },
+  }, */
   {
     id: "froyo_pool",
     symbol: "FRO",
@@ -111,7 +111,7 @@ const pools = [
     rewardPerBlock: 3.404,
     decimals: 18,
   },
-  {
+  /* {
     id: "bsw_pool",
     symbol: "BSW",
     name: "Biswap",
@@ -124,8 +124,8 @@ const pools = [
     endBlock: 17778085,
     rewardPerBlock: 1.157,
     decimals: 18,
-  },
-  {
+  }, */
+  /* {
     id: "duet_pool",
     symbol: "DUET",
     name: "Duet Protocol",
@@ -138,8 +138,8 @@ const pools = [
     endBlock: 17690870,
     rewardPerBlock: 0.4861,
     decimals: 18,
-  },
-  {
+  }, */
+  /* {
     id: "gmt_pool",
     symbol: "GMT",
     name: "Green Metaverse Token",
@@ -152,7 +152,7 @@ const pools = [
     endBlock: 17636220,
     rewardPerBlock: 4.629,
     decimals: 8,
-  },
+  }, */
   /* {
     id: "xwg_pool",
     symbol: "XWG",

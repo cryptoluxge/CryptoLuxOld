@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { getGlobalData } from "utils/CoinGeckoAPI";
 import SuiBox from "components/SuiBox";
 import Grid from "@mui/material/Grid";
@@ -7,6 +7,7 @@ import { BsCurrencyBitcoin } from "react-icons/bs";
 import { FaEthereum } from "react-icons/fa";
 
 function MarketData() {
+  const mountedRef = useRef(true);
   const [data, setData] = useState([]);
 
   async function getMarketData() {
@@ -16,6 +17,9 @@ function MarketData() {
 
   useEffect(() => {
     getMarketData();
+    return () => {
+      mountedRef.current = false;
+    };
   }, []);
 
   return (
