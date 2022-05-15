@@ -10,6 +10,7 @@ import MiniInfo from "layouts/dashboard/components/MiniInfo";
 import BalancesCard from "layouts/dashboard/components/BalancesCard/BalancesOnChains";
 import { useWeb3React } from "@web3-react/core";
 import TokenBalances from "./components/TokenBalances";
+import TransactionsCard from "./components/TxCard";
 
 function Dashboard() {
   const { active } = useWeb3React();
@@ -26,6 +27,9 @@ function Dashboard() {
             </Grid>
             <Grid item xs={12} md={6} lg={4}>
               <TokenBalances />
+            </Grid>
+            <Grid item xs={12} md={6} lg={4}>
+              <TransactionsCard />
             </Grid>
           </Grid>
         ) : null}

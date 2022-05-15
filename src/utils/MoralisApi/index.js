@@ -1,4 +1,13 @@
-export const getNativeTransactions = async (walletAddress, chain) => {
+export const getNativeTransactions = async (walletAddress, chainId) => {
+  let chain;
+  if (chainId === 56) {
+    chain = "bsc";
+  } else if (chainId === 1) {
+    chain = "eth";
+  } else if (chainId === 43114) {
+    chain = "avalanche";
+  }
+
   const json = await fetch(`https://deep-index.moralis.io/api/v2/${walletAddress}?chain=${chain}`, {
     headers: {
       "X-API-Key": "l7H7MfYwlfi1e7MjCpxbWsEWzLTudxOmgxJl4HvNixTrUduN1dZRHyW9ehyN4PXK",
