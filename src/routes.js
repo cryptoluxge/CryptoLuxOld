@@ -9,6 +9,7 @@ import PCSIfo from "layouts/pancakeswap/ifo";
 import PCSSquad from "layouts/pancakeswap/PancakeSquad";
 import Staking from "layouts/staking";
 import Farming from "layouts/farming";
+import Market from "layouts/Market";
 /* import DappStore from "layouts/DappStore"; */
 
 // Soft UI Dashboard React icons
@@ -20,6 +21,7 @@ import PeopleRoundedIcon from "@mui/icons-material/PeopleRounded";
 import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
 import SavingsIcon from "@mui/icons-material/Savings";
 import AgricultureIcon from "@mui/icons-material/Agriculture";
+import CandlestickChartIcon from "@mui/icons-material/CandlestickChart";
 /* import StorefrontIcon from "@mui/icons-material/Storefront"; */
 
 const routes = [
@@ -106,6 +108,15 @@ const routes = [
     component: DappStore,
     noCollapse: true,
   }, */
+  {
+    type: "uncollapseble",
+    name: "ბაზარი",
+    key: "market",
+    route: "/market",
+    icon: <CandlestickChartIcon />,
+    component: Market,
+    noCollapse: true,
+  },
   {
     type: "uncollapseble",
     name: "ქსელები",

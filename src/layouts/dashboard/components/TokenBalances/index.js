@@ -26,7 +26,7 @@ function tokenBalances() {
     const tokenData = await getTokenBalances(account, chain);
     setTokenBalance(tokenData);
   }
-  console.log(tokenBalance);
+
   useEffect(() => {
     if (active === true) {
       getTokenBalance();
